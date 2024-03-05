@@ -1,0 +1,396 @@
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  position: relative; /* Make sure the ::before pseudo-element is positioned relative to the body */
+  background: url('IMAGES/BLOG.jpg') no-repeat center fixed;
+  background-size: cover;
+}
+
+
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.5); /* Adjust the opacity here */
+  z-index: -1; /* Place the overlay behind other elements */
+}
+
+header {
+  background-color: #fff;
+  color: #840909;
+  padding: 10px;
+  text-align: center;
+  font-weight: bold;
+}
+
+
+nav a {
+  color: #f4f4f4;
+  margin: 0 10px;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+nav {
+  background-color: #24a2be;
+  color: #f4f4f4;
+  padding: 13px;
+  font-size: 20px;
+  text-align: center;
+  font-weight: bold;
+  height: 50px; /* Adjusted for consistency */
+  width: 100%;
+  display: flex; /* Added for vertical alignment */
+  align-items: center; /* Added for vertical alignment */
+  justify-content: center; /* Ensures text is centered horizontally as well */
+}
+
+.page-container {
+  background-color: #24a2be;
+  color: #f4f4f4;
+  padding: 13px;
+  font-size: 20px;
+  text-align: center;
+  font-weight: bold;
+  height: 50px; /* Adjusted to match nav */
+  width: 100%;
+  display: flex; /* Ensures consistency with nav */
+  align-items: center; /* Vertically centers the content */
+  justify-content: center; /* Centers content horizontally */
+}
+
+
+img {
+  width: 100%;
+  height: 70%;
+  display: block;
+} 
+
+.img-link {
+  display: block;
+  margin: auto;
+  width: 18%;
+  height: auto;
+  display: block;/* Optional: Adjust the margin as needed */
+}
+
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 350px;
+  margin: 10% auto;
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+}
+
+
+button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #24a2be;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+
+button:hover, a:hover {
+  opacity: 0.7;
+  color: #abe2ee;
+}
+
+ /* Add padding and center the form */
+ .container {
+  max-width: 350px;
+  margin: 10% auto;
+  padding: 28px;
+  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+  border-radius: 10px; /* Rounded corners */
+}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 95%;
+  padding: 10px;
+  margin: 5px 0 18px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Overwrite default styles of hr */
+hr {
+  border: 1px solid #24a2be;
+  margin-bottom: 25px;
+}
+
+/* Set a style for the submit button */
+.registerbtn {
+  background-color: #24a2be;
+  color: white;
+  padding: 12px 14px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.registerbtn:hover {
+  opacity: 0.7;
+}
+
+/* Set a grey background color and center the text of the "sign in" section */
+.signin {
+  background-color: #f1f1f1;
+  text-align: center;
+  padding: 12px; /* Add padding for better visibility */
+  border-radius: 5px; /* Rounded corners */
+}
+
+.welcome-box {
+  text-align: center;
+  font-family: cursive;
+  font-size: 33px;
+  color: #eca311;
+  padding: 10px;
+  margin: 0 auto; /* Center the box horizontally */
+  position: fixed; /* Fixed positioning relative to the viewport */
+  top:220px; /* Anchor to the bottom */
+  left: 0;
+  right: 0; /* These ensure it's centered */
+
+}
+
+.welcome-message {
+  text-align: center;
+  font-family:cursive;
+  font-size: 18px;
+  color: black;
+  padding: 10px;
+  margin: 0 auto; /* Center the box horizontally */
+  position: fixed; /* Fixed positioning relative to the viewport */
+  bottom:123px; /* Anchor to the bottom */
+  left: 0;
+  right: 0; /* These ensure it's centered */
+}
+
+.author-photo {
+  width: 60px;
+  height: 60px;
+  border-radius: 650px;
+  margin-left: 30px;
+
+}
+
+.author a {
+  color: black; /* Example link color */
+  text-align: center;
+  font-family: cursive;
+  font-size: 20px;
+  margin: 0 auto; /* Center the box horizontally */
+  margin-left: 60px; /* Adjust as needed to align with the author's photo */
+}
+
+
+.author a:hover {
+  color: #840909;
+  opacity: 0.7;
+}
+
+
+.author-list {
+  padding: 13px;
+  width: 50%; /* Adjusts the width of the box */
+  max-width: 600px; /* Ensures the box doesn't get too wide on large screens */
+  margin: auto;
+  text-align: center; /* Centers the title */
+}
+
+
+.author {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px; /* Adds space between author entries */
+  padding: 13px;
+  width: 80%; /* Adjusts the width of the box */
+  max-width: 800px; /* Ensures the box doesn't get too wide on large screens */
+  margin: auto;
+  text-align: center; /* Centers the title */
+  
+}
+
+.author-photo {
+  margin-right: 10px; /* Adds some space between the image and the text */
+  width: 50px; /* Sets a fixed width for the images */
+  height: 50px; /* Sets a fixed height for the images */
+  object-fit: cover; /* Ensures images cover the space properly without distortion */
+}
+
+/* Additional styling for aesthetics */
+a {
+  color: #24a2be;
+  text-decoration: none;
+  font-size: 14px;
+  }
+
+
+a:hover {
+  text-decoration: underline;
+}
+
+
+  
+/* Existing styles */
+
+/* Adjusted styles for links with font size */
+.links {
+  text-align: center; /* Center align text */
+  margin: 10px 0; /* Adjust spacing around links as needed */
+  font-size: 14px; /* Set font size to 16px */
+}
+
+
+/* Additional styles for layout */
+.signin {
+  display: flex;
+  flex-direction: column; /* Use 'row' for side-by-side layout */
+  align-items: center; /* Centers the content if using 'column', adjust as needed */
+}
+
+.update-details-container {
+  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
+  padding: 28px;
+  border-radius: 10px; /* Rounded corners for the container */
+  max-width: 350px; /* Maximum width to ensure form doesn't stretch too much on larger screens */
+  margin: 10% auto; /* Center the container */
+}
+
+
+
+
+.input-group {
+  margin-bottom: 20px; /* Spacing between input fields */
+}
+
+.input-group label {
+  display: block; /* Ensure the label is on a new line */
+  margin-bottom: 5px; /* Space between label and input */
+}
+
+
+
+
+.input-group input[type="text"],
+.input-group input[type="email"],
+.input-group textarea,
+.input-group input[type="file"] {
+  width: 95%; /* Full width */
+  padding: 10px; /* Padding for input fields */
+  margin-bottom: 10px; /* Space below each input */
+  border: 1px solid #ccc; /* Border color */
+  border-radius: 5px; /* Slightly rounded corners for inputs */
+}
+
+.input-group textarea {
+  height: 95px; /* Set a fixed height for the bio textarea */
+  resize: vertical; /* Allow vertical resizing only */
+}
+
+.updatebtn {
+  background-color: #24a2be; /* Use the primary color for consistency */
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+.updatebtn:hover {
+  opacity: 0.9; /* Slight change on hover for feedback */
+}
+
+
+.dashboard-container {
+  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
+  padding: 20px;
+  border-radius: 10px; /* Rounded corners for the container */
+  width: 80%;
+  max-width: 350px; /* Adjusted for a more compact dashboard */
+  margin: 10% auto; /* Center the container */
+  text-align: center; /* Center-align the text and buttons */
+}
+
+.dashboard-actions {
+  margin-top: 20px; /* Add some space above the buttons */
+}
+
+.dashboard-btn {
+  display: block; /* Change to block to have each button on a new line */
+  background-color: #24a2be; /* Primary color for consistency */
+  color: white;
+  padding: 12px 20px;
+  margin: 10px auto; /* Adjust margin for vertical spacing, centered horizontally */
+  border: none;
+  border-radius: 5px; /* Slightly rounded corners */
+  text-decoration: none; /* Remove underline from links */
+  font-size: 16px; /* Text size */
+  cursor: pointer; /* Cursor to pointer to indicate it's clickable */
+  width: 90%; /* Adjust width as necessary */
+  box-sizing: border-box; /* Ensures padding is included in the button's width */
+}
+
+.logout-btn {
+  background-color: #840909; /* A distinct color for the log out button */
+  margin-top: 20px; /* Additional space from other buttons to avoid misclicks */
+}
+
+
+
+table {
+  width: 90%;
+  margin: 0 auto;
+  border-collapse: collapse;
+  font-size: 16px; /* Option 2: Change font size for the entire table */
+}
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+th {
+  background-color: #f2f2f2;
+}
+tr:nth-child(even) {background-color: #f9f9f9;}
+
+.author-books {
+  display: flex; /* Use flexbox to align children */
+  justify-content: center; /* Center content horizontally in the container */
+  align-items: center; /* Center content vertically in the container */
+  flex-direction: column; /* Stack items vertically */
+  margin: 20px 0; /* Add some margin for spacing between items */
+}
+
+.author-books img {
+  width: 250px; /* Set the width to 150px */
+  height: 350px; /* Set the height to 150px */
+  object-fit: cover; /* Ensure the image covers the area, could be adjust based on your needs */
+}
+
+
+
+
